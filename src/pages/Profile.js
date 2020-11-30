@@ -27,8 +27,6 @@ const Profile = () => {
           setPets((oldArray) => [...oldArray, user.user.pets[i]]);
         }
       }
-      // setImages(user.user.images)
-      console.log(user.user, userName);
     });
   };
 
