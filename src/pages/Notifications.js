@@ -3,11 +3,11 @@ import Notification from '../components/Notification'
 import RelationshipModel from '../models/relationship'
 
 const Notifications = (props) => {
-    
+    console.log(props)
     const [userId] = useState(localStorage.getItem('id'))
     const [users, setUsers] = useState([])
     const [relationship, setRelationship] = useState([])
-
+    console.log(props.history)
    const fethData = () => {
        RelationshipModel.pending(userId).then( requests =>{
             // console.log(requests)
@@ -29,7 +29,7 @@ const Notifications = (props) => {
     console.log(relationship)
 
     const request = relationship.map((relationship, index) =>(
-        <Notification  key={index} relationship={relationship}/>
+        <Notification  key={index} relationship={relationship} history={props.history}/>
     ))
    
 
