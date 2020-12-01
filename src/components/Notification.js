@@ -6,15 +6,13 @@ const Notification = (props) => {
 
     const handleSubmit = (e) => {
         
-        // RelationshipModel.update( {
-        //     status: 1,
-        //     actionUserId: userId
-        // }, props.relationship.id)
-        // .then(data => {
-        //     props.history.push('/profile')
-        // })
-        props.history.push('/profile')
-        console.log(props.history)
+        RelationshipModel.update( {
+            status: 1,
+            actionUserId: userId
+        }, props.relationship.id)
+        .then(data => {
+            props.history.push('/profile')
+        })
     }
 
     return (
