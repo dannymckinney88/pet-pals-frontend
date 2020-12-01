@@ -11,7 +11,6 @@ const EditPet = (props) => {
 
     const fetchPet = () => {
         PetModel.one(props.match.params.id).then((petData) => {
-            console.log(petData.pet)
             setName(petData.pet.name)
             setBirthdate(petData.pet.birthdate)
         })
@@ -41,7 +40,8 @@ const EditPet = (props) => {
         <div className="ep-body">
             <h1 className="ep-heading">Edit Pet</h1>
             <form className="ep-form" onSubmit={handleSubmit}>
-                    <label className="ep-label" htmlFor="name">Name:</label>
+            <div className="input-wrapper">
+                    <label className="ep-label" htmlFor="name">Name:</label><br/>
                     <input
                         className="ep-input"
                         onChange={(e) => { setName(e.target.value) }}
@@ -53,7 +53,7 @@ const EditPet = (props) => {
                         placeholder="(e.g. George)"
                         value={name}
                     /><br />
-                    <label className="ep-label" htmlFor="birthdate">Birthdate:</label>
+                    <label className="ep-label" htmlFor="birthdate">Birthdate:</label><br/>
                     <input
                         className="ep-input"
                         onChange={(e) => { setBirthdate(e.target.value) }}
@@ -63,7 +63,7 @@ const EditPet = (props) => {
                         id="birthdate"
                         name="birthdate"
                         value={birthdate}
-                    /><br />
+                    /><br /></div>
                 <div className="ep-button-wrapper">
                     <button className="ep-button" type="submit">✅</button>
                     <form onSubmit={handleDelete}><button className="ep-button" type="submit">🗑️</button></form>

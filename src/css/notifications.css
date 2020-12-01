@@ -1,31 +1,38 @@
-.ac-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.ac-heading {
-  text-align: center;
+.userName{
   font-family: 'Neucha', cursive;
-  margin: 5% 0%;
 }
 
-.ac-form {
-  align-self: center;
+.n-body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-.ac-button {
+.n-heading{
+  font-family: 'Neucha', cursive;
+  color: #f2762e;
+  margin: 2%;
+}
+
+.n-results{
+  align-self: center;
+  text-align: center;
+}
+
+.n-emoji{
+  font-size: 3rem;
+}
+
+.n-button {
   background-color: #F23030;
   text-decoration: none;
   padding: 4px 0 0 0;
-  width: 100px;
+  width: 155px;
   border-radius: 15px;
   border: none;
   color: #FFF;
   font-family: 'Neucha', cursive;
   align-self: center;
 }
-
-
 
